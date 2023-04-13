@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+	int arr [3] = {10, 20, 30};
+	int *ptr = arr;
+
+	for (int i = 0; i < 3; i++){
+		cout << "Nilai array[" << i << "] = " << *ptr << endl;
+		ptr++;
+	}
+}
+ 29  
+prak2 pointer.cpp
+@@ -0,0 +1,29 @@
+//& untuk mendapatkan alamat memori dari variabel
+//* untuk mendapatkan nilai yg disimpan di alamat yg ditunjuk pointer
+
+#include <iostream>
+using namespace std;
+
+
+int main(){
+	int *ip;
+	double *dp;
+	float *fp;
+	char *ch;
+
+	int num = 10;
+	double dbl = 3.14;
+	float flt = 2.5;
+	char chr = 'A';
+
+	ip = &num;
+	dp = &dbl;
+	fp = &flt;
+	ch = &chr;
+
+	cout << "Nilai integer: " << *ip << ", alamat memori: "<< ip << endl;
+	cout << "Nilai double: " << *dp << ", alamat memori: "<< dp << endl;
+	cout << "Nilai float: " << *fp << ", alamat memori: "<< fp << endl;
+	cout << "Nilai char: " << ch << ", alamat memori: "<< (void)ch << endl;
+}
